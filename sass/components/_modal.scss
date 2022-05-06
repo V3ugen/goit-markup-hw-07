@@ -197,7 +197,7 @@
     border-radius: 4px;
 }
 
-.checkbox:checked+.icon-check {
+.checkbox:checked + .icon-check {
     border: 1.5px solid var(--hower-color);
     background-image: url(../images/icon-check.svg);
     background-color: var(--hower-color);
