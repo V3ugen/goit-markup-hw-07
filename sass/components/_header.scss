@@ -20,18 +20,25 @@
 
     font-family: 'Raleway', sans-serif;
     color: var(--logo-color);
-    font-size: 26px;
-    line-height: 1.19;
+    font-size: 24px;
+    line-height: 1.16;
     font-weight: 700;
+    
 
-    padding-bottom: 24px;
-    padding-top: 25px;
+    padding: 16px 0 16px 0;
     transition: text-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover,
     &:focus{
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
         0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    @media screen and (min-width:$deskpot) {
+        font-size: 26px;
+        line-height: 1.19;
+        padding: 25px 0 24px 0;
+        
     }
 }
 
@@ -57,7 +64,7 @@
 .navigation--active::after {
     content: "";
     position: absolute;
-    bottom: -0.9px;
+    bottom: -5px;
     left: 0;
     width: 100%;
     border: 2px solid var(--hower-color);
@@ -70,6 +77,7 @@
     font-weight: var(--font-weight-main);
     line-height: 1.14;
     display: block;
+    font-weight: 500;
     padding-top: 32px;
     padding-bottom: 32px;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -91,5 +99,27 @@
 
     &:hover{
         fill: currentColor;
+    }
+}
+.contacts__list {
+    display: flex;
+    margin-left: auto;
+}
+
+.contacts__list :not(:first-child) {
+    margin-left: 50px;
+}
+
+.contacts__list a {
+    font-weight: 500;
+    line-height: 1.14;
+    color: var(--main-color);
+    display: flex;
+    align-items: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: var(--hower-color);
     }
 }
